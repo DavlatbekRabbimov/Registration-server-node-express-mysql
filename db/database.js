@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const {Sequelize, DataTypes} = require('sequelize');
 require('dotenv').config();
 
 const db_name = process.env.DB_NAME;
@@ -17,11 +17,11 @@ const User = sequelize.define('User', {
     'email': {type: DataTypes.STRING, unique: true},
     'password': DataTypes.STRING,
     'lastLogin': DataTypes.DATE,
-    'status' : DataTypes.STRING
+    'status': DataTypes.STRING
 }, {
     timestamps: false
 });
 
 sequelize.sync();
 
-module.exports = { User };
+module.exports = {User};
